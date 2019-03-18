@@ -1,5 +1,10 @@
 import json
  
+def write_to_json(filename, dicts):
+    with open(filename, 'w') as outfile:
+        json.dump(dicts, outfile)
+    return dicts
+
 list_of_stud = [
     {
         "name" : "Indra",
@@ -29,7 +34,6 @@ for student in list_of_stud:
     i+=1
 
 import json
+
 with open('test_json.json', 'w') as outfile:
     json.dump(students, outfile)
-
-# print(students[1]["name"])
